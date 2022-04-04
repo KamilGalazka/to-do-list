@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Jost", sans-serif;
+}
+
+div.title {
+  text-align: center;
+  background-color: #2a9d8f;
+  width: 70vw;
+  margin: 20px auto 0;
+  border-radius: 20px;
+  box-shadow: 5px 5px #264653;
+}
+
+h1 {
+  font-size: 5rem;
+  font-family: "Indie Flower", cursive;
+  text-transform: uppercase;
+  padding: 50px 0;
+  letter-spacing: 10px;
+}
+
+div.instruction {
+  text-align: center;
+  padding: 40px 0;
+}
+
+div.instruction h3 {
+  font-size: 1.7rem;
+}
+
+div.new-task {
+  text-align: center;
+  padding: 40px 0;
+}
+
+div.new-task input {
+  width: 50vw;
+  height: 5vh;
+  font-size: 24px;
+  border-radius: 5px;
+  margin-right: 50px;
+}
+
+div.new-task button.add-new-task {
+  width: 10vw;
+  height: 5vh;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: #fff;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+div.new-task button.add-new-task:hover {
+  background-color: #cb997e;
+  color: white;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+ul.tasks-list {
+  list-style: none;
+  font-size: 2rem;
+}
+
+div.user-tasks p.empty-list {
+  text-align: center;
+  font-size: 2rem;
+}
+
+ul.tasks-list li.task {
+  position: relative;
+  width: 80vw;
+  min-height: 20vh;
+  text-align: center;
+  background-color: #e9c46a;
+  margin: 50px auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px #264653;
+  overflow: hidden;
+}
+
+ul.tasks-list li.task div.task-text {
+  margin: 70px 30px 20px 30px;
+}
+
+li.task button.delete-task {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 20px;
+  background-color: #e76f51;
+  border-radius: 10px;
+  border-color: none;
+  cursor: pointer;
+  color: white;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: 1s;
+}
+
+li.task button.delete-task span {
+  text-transform: uppercase;
+  padding: 20px;
+  position: relative;
+  transition: 0.5s;
+  left: 0;
+}
+
+li.task button.delete-task i {
+  padding: 10px;
+  position: relative;
+  left: 0;
+  transition: 0.5s;
+}
+
+li.task button.delete-task:hover {
+  opacity: 0.8;
+}
+
+li.task button.delete-task:hover span {
+  left: -110px;
+}
+
+li.task button.delete-task:hover i {
+  left: -60px;
+  transform: scale(1.7);
+}

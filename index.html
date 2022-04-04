@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projekt 1 - toDoList</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Jost:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="title">
+        <h1>to-do-list</h1>
+      </div>
+      <div class="instruction">
+        <h3>
+          Add task/tasks to this list. You can also delete the task you have
+          done.
+        </h3>
+      </div>
+      <div class="new-task">
+        <input type="text" v-model="newTask" />
+        <button class="add-new-task" @click="addNewTaskToList()">
+          Add task
+        </button>
+      </div>
+      <div class="user-tasks">
+        <p class="empty-list" v-if="tasks.length === 0">Nothing to do.</p>
+        <ul class="tasks-list" v-else>
+          <li class="task" v-for="(task, index) in tasks" :key="task">
+            <div class="task-text"><span>{{task}}</span></div>
+            <div>
+              <button class="delete-task" @click="deleteTaskFun(index)">
+                <span>remove</span>
+                <i class="fa fa-remove"></i>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
